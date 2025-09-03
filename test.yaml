@@ -1,9 +1,23 @@
 openapi: 3.1.0
 info:
-  title: Title
-  description: Title
+  title: STD24180
+  description: This a specification of STD24180
   version: 1.0.0
 servers:
-  - url: 'https'
+  - url: 'http://localhost:8080'
 paths:
-  
+  /test:
+    get:
+      summary: PING
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: PONG
+
